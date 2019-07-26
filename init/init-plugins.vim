@@ -277,6 +277,15 @@ if index(g:bundle_group, 'filetypes') >= 0
 
 	" vim org-mode 
 	Plug 'jceb/vim-orgmode', { 'for': 'org' }
+
+	" latex
+	Plug 'lervag/vimtex', { 'for': 'tex' }
+	let g:tex_flavor='latex'
+	let g:vimtex_view_method='zathura'
+	let g:vimtex_quickfix_mode=0
+	" 隐藏\[, \], $, 替换\bigcap, \in, 提升tex可读性
+	set conceallevel=1
+	let g:tex_conceal='abdmg'
 endif
 
 
